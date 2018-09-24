@@ -1,4 +1,4 @@
-# Simple Module (v2.x API)
+# Simple Module (reduced v2.x API)
 
 SimpleModule is a simple base class providing some necessary features to make its subclasses extendable. The front-end UI libraries of the color scheme are built based on this abstract class.
 
@@ -74,10 +74,10 @@ The `Module.i18n` object is used to store localised resources (key-value pairs),
 
 ```coffee
 Module.i18n =
-  'zh-CN':
-    Hello: 'Hello, %s'
+  'de':
+    Hello: 'Hallo!'
   'en':
-    Hello: 'Hi, %s'
+    Hello: 'Hello!'
 ```
 
 `Module.locale` is used to set the current localisation language, for example:
@@ -86,10 +86,10 @@ Module.i18n =
 Module.locale = 'zh-CN'
 ```
 
-`module._t(key, args..)` can be used to get the translation string, for example:
+`module._t(key)` can be used to get the translation string, for example:
 
 ```coffee
-@_t('hello', 'farthinker') # Hi, farthinker
+@_t('hello') # Hallo
 ```
 
 SimpleModule only provides the simplest localisation support. Components with more complex internationalisation/localisation requirements should use a full-fledged library instead.
