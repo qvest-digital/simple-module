@@ -106,5 +106,3 @@ class SimpleModule
     'zh-CN': {}
 
   @locale: 'en'
-
-module.exports = SimpleModule
