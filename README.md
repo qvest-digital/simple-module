@@ -68,8 +68,6 @@ SimpleModule.include(testMixins);
 
 `SimpleModule.connect` can mount plugins and extensions to components.
 
-`module.triggerHandler 'type', [args]` triggers a custom event and returns the return value of the last callback
-
 #### Simple localisation support
 
 The `Module.i18n` object is used to store localised resources (key-value pairs), for example:
