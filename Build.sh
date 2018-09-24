@@ -16,3 +16,16 @@ sed --posix \
     -e '/{{{code}}}/r /dev/stdin' \
     -e '/{{/d' \
     build/templates/umd.hbs <src/simple-module.js >dist/simple-module.js
+cd dist
+uglifyjs \
+    --source-map simple-module.min.map \
+    --screw-ie8 \
+    --output simple-module.min.js \
+    --mangle \
+    --compress \
+    --preamble '/* © 2018; see ../LICENSE.md for details */' \
+    --stats \
+    --verbose \
+    simple-module.js
+cd ..
+rm src/simple-module.js
