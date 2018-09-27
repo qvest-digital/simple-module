@@ -1,19 +1,16 @@
 {
-  "name": "simple-module",
-  "version": "2.1.0",
-  "homepage": "https://github.com/tarent/simple-module",
   "authors": [
     "mirabilos <t.glaser@tarent.de>",
     "farthinker <farthinker@gmail.com>"
   ],
   "description": "A simple base class for modules and UI.",
-  "main": "dist/simple-module.js",
-  "license": "MIT",
+  "homepage": "https://github.com/tarent/simple-module",
   "ignore": [
     "**/.*",
-    "package.json"
+    "build/LICENSE"
   ],
-  "dependencies": {
-    "jquery": "2.x"
-  }
+  "license": "MIT",
+  "main": "dist/simple-module.js",
+  "name": "simple-module",
+  "version": "2.1.0"
 }
