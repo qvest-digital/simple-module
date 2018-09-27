@@ -1,4 +1,4 @@
-SimpleModule = require '../src/simple-module'
+SimpleModule = require '../dist/simple-module.min.js'
 
 describe 'Simple Module', ->
   class TestModule extends SimpleModule
