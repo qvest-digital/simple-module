@@ -5,3 +5,6 @@
 	path = external/parse5
 	url = https://github.com/inikulin/parse5
 	branch = v1.x
+[submodule "external/xml-name-validator"]
+	path = external/xml-name-validator
+	url = https://github.com/jsdom/xml-name-validator

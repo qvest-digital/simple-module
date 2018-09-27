@@ -5,11 +5,15 @@ var minHTML = '<html><head><title>testsuite</title></head><body><p>Hello, World!
 
 /* inject parse5 into the global Node.JS module loader */
 var Module = require('module').Module;
+var mods = {
+	"parse5": "/external/parse5/index.js",
+	"xml-name-validator": "/external/xml-name-validator/lib/xml-name-validator.js"
+};
 var oldResolveFilename = Module._resolveFilename;
 var cwd = process.cwd();
 Module._resolveFilename = function _resolveFilename_patched(request, parent, isMain) {
-	if (request == 'parse5')
-		request = cwd + '/external/parse5/index.js';
+	if (mods[request])
+		request = cwd + mods[request];
 	return (oldResolveFilename(request, parent, isMain));
 };
 
