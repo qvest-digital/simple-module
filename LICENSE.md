@@ -1,8 +1,8 @@
 ## The MIT License (MIT)
 
-Copyright (c) 2016 Mycolorway Design
+Copyright (c) 2016 Mycolorway Design (彩程设计)
 Copyright (c) 2014 Juho Vepsalainen
-Copyright (c) 2018 mirabilos and coworkers, ⮡ tarent solutions GmbH
+Copyright (c) 2018 mirabilos, Lukas Degener, ⮡ tarent solutions GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the

@@ -1,3 +1,4 @@
+SimpleModule = require '../src/simple-module'
 
 describe 'Simple Module', ->
   class TestModule extends SimpleModule
