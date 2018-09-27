@@ -1,5 +1,8 @@
-var jsdom = require('jsdom');
 var jquery = require('jquery');
-var dom = new jsdom.JSDOM('<html><head><title>testsuite</title></head><body><p>Hello, World!</p></body></html>');
-global.$ = jquery(dom.window);
+var minHTML = '<html><head><title>testsuite</title></head><body><p>Hello, World!</p></body></html>';
+
+var jsdom = require('../external/jsdom-no-contextify/lib/jsdom.js');
+var doc = jsdom.jsdom(minHTML);
+
+global.$ = jquery(doc.parentWindow);
 global.expect = require("chai").expect
