@@ -22,7 +22,16 @@ var jsdom = require('../external/jsdom-no-contextify/lib/jsdom.js');
 var doc = jsdom.jsdom(minHTML);
 
 /* instantiate jQuery with the (virtual) DOM */
-global.$ = jquery(doc.parentWindow);
+var jQueryInstance = jquery(doc.parentWindow);
+global.$ = jQueryInstance;
+
+/* make future require('jquery') calls return that instance */
+var Req = Module.prototype.require;
+Module.prototype.require = function patchedRequire(name) {
+	if (name == 'jquery')
+		return jQueryInstance;
+	return Req.apply(this, arguments);
+};
 
 /* load test suite stuff */
 global.expect = require("chai").expect
