@@ -1,3 +1,7 @@
 [submodule "external/jsdom-no-contextify"]
 	path = external/jsdom-no-contextify
 	url = https://github.com/crealogix/jsdom
+[submodule "external/parse5"]
+	path = external/parse5
+	url = https://github.com/inikulin/parse5
+	branch = v1.x
