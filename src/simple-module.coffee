@@ -35,10 +35,14 @@ class SimpleModule
     unless cls.pluginName
       throw new Error('SimpleModule.connect: cannot connect plugin without pluginName')
 
+    # create list of mounted classes if not already created;
+    # this must be done in both @connect and the constructor
+    # due to the way CoffeeScript’s extend function works
+    @_connectedClasses = [] unless @_connectedClasses
+
     # mark target as having been mounted
     cls::_connected = true
     # store away in our list of mounted classes
-    @_connectedClasses = [] unless @_connectedClasses
     @_connectedClasses.push(cls)
     # make available
     @[cls.pluginName] = cls
@@ -53,8 +57,12 @@ class SimpleModule
   constructor: (opts) ->
     @opts = $.extend {}, @opts, opts
 
-    # create singleton instances of connected classes
+    # create list of mounted classes if not already created;
+    # this must be done in both @connect and the constructor
+    # due to the way CoffeeScript’s extend function works
     @constructor._connectedClasses ||= []
+
+    # create singleton instances of connected classes
     instances = for cls in @constructor._connectedClasses
       # lowercase first letter of class name
       name = cls.pluginName.charAt(0).toLowerCase() + cls.pluginName.slice(1)
