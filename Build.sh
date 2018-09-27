@@ -29,3 +29,5 @@ uglifyjs \
     simple-module.js
 cd ..
 rm src/simple-module.js
+echo >>dist/simple-module.min.js
+echo >>dist/simple-module.min.map
