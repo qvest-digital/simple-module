@@ -34,6 +34,8 @@ describe 'Simple Module', ->
     $.extend TestModule.i18n,
       'zh-CN':
         'hello': '你好，%s!'
+      'en':
+        'hello': 'Hello, World!'
     testModule = new TestModule()
-    expect(testModule._t('hello', 'farthinker')).to.equal('你好，farthinker!')
-    expect(TestModule._t('hello', 'farthinker')).to.equal('你好，farthinker!')
+    expect(testModule._t('hello')).to.equal('Hello, World!')
+    expect(TestModule._t('hello')).to.equal('Hello, World!')
