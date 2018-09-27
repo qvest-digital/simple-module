@@ -54,10 +54,10 @@ SimpleModule = (function() {
     if (!cls.pluginName) {
       throw new Error('SimpleModule.connect: cannot connect plugin without pluginName');
     }
-    cls.prototype._connected = true;
     if (!this._connectedClasses) {
       this._connectedClasses = [];
     }
+    cls.prototype._connected = true;
     this._connectedClasses.push(cls);
     return this[cls.pluginName] = cls;
   };

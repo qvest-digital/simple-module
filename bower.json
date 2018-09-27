@@ -13,5 +13,5 @@
   "license": "MIT",
   "main": "dist/simple-module.js",
   "name": "simple-module",
-  "version": "2.1.0"
+  "version": "2.1.1"
 }
