@@ -8,3 +8,6 @@
 [submodule "external/xml-name-validator"]
 	path = external/xml-name-validator
 	url = https://github.com/jsdom/xml-name-validator
+[submodule "external/waka"]
+	path = external/waka
+	url = git@github.com:fixplz/waka.git
