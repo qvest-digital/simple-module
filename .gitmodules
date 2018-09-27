@@ -1,0 +1,3 @@
+[submodule "external/jsdom-no-contextify"]
+	path = external/jsdom-no-contextify
+	url = https://github.com/crealogix/jsdom
