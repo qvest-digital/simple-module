@@ -22,8 +22,7 @@ describe 'Simple Module', ->
 
   it 'can connect other class', ->
     class TestPlugin extends SimpleModule
-      opts:
-        pluginName: 'Test Plugin'
+      @pluginName: 'TestPlugin'
     TestModule.connect TestPlugin
     testModule = new TestModule
     expect(testModule.testPlugin.constructor).to.equal(TestPlugin)
